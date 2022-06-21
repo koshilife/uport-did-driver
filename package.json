@@ -23,6 +23,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
+    "cors": "^2.8.5",
     "did-resolver": "3.2.2",
     "ethr-did-resolver": "^6.0.1",
     "express": "4.18.1",

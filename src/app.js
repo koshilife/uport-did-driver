@@ -2,6 +2,7 @@ const { Resolver } = require('did-resolver')
 const ethr = require('ethr-did-resolver')
 const web = require('web-did-resolver')
 const nacl = require('nacl-did')
+const cors = require('cors')
 
 //this project ID is only useful for ethr-did resolution
 const infuraId = 'ec9c99d75b834bac8dd4bfacad8cfdf7'
@@ -57,6 +58,7 @@ const resolver = new Resolver(
 
 const express = require('express')
 const app = express()
+app.use(cors())
 
 app.get('/1.0/identifiers/*', function (req, res) {
   const url = req.url
